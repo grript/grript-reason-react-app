@@ -8,4 +8,11 @@ ReactDOMRe.renderToElementWithId(
   "root",
 );
 
+ReactDOMRe.renderToElementWithId(
+  <Header />,
+  "header",
+);
+
+
+
 register_service_worker();
