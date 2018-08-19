@@ -1,0 +1,22 @@
+.header {
+  background-color: #44959B;
+  color: #fff;
+  padding: 1em 0;
+}
+
+.container {
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container-mobile {
+  padding-left: 1em;
+  padding-right: 1em;
+  
+}
+@media (min-width: 930px) {
+  .container-mobile {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
