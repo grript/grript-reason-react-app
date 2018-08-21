@@ -19,5 +19,6 @@ let make = (_children) => {
   render: self =>
     <div className="header-main" onClick=(self.handle(handleClick))>
       <HeaderBranding message="Grript"/>
+      <MenuMain />
     </div>,
 };
