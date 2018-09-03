@@ -1,0 +1,9 @@
+@import 'styles/1_variables.scss'; // assuming a styles directory under src/
+
+.header {
+  background-color: $main_color;
+}
+
+.header-container {
+  position: relative;
+}

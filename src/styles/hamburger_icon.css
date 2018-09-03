@@ -1,0 +1,19 @@
+.hamburger-icon-wrapper {
+  cursor: pointer;
+  border-radius: 50px;
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+  text-align: center;
+  background-color: #66CC00; }
+  .hamburger-icon-wrapper > .hamburger-icon {
+    margin-top: 4px; }
+    .hamburger-icon-wrapper > .hamburger-icon > div {
+      height: 3px;
+      margin-bottom: 3px;
+      background-color: #fff; }
+    .hamburger-icon-wrapper > .hamburger-icon > div:last-child {
+      margin-bottom: 0; }
+  @media (min-width: 700px) {
+    .hamburger-icon-wrapper {
+      display: none; } }

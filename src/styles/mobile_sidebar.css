@@ -1,0 +1,15 @@
+.mobile-sidebar {
+  padding: 1em 30px 2em 30px;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #195660; }
+  @media (min-width: 700px) {
+    .mobile-sidebar {
+      background-color: transparent;
+      padding: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-right: auto;
+      margin-left: auto;
+      width: 100%; } }

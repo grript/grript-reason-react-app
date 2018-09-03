@@ -1,0 +1,42 @@
+@import '../src/styles/1_variables.scss';
+
+a {
+  color: $aqua_blue;
+  .header & {
+    color: #fff;
+  }
+}
+
+.header {
+  background-color: $main_color;
+  color: #fff;
+  padding: 1em 0;
+}
+
+@media (max-width: 930px) {
+  .container-mobile {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
+
+.container {
+  max-width: 900px;
+}
+
+@media (min-width: 930px) {
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.header {
+  position: relative;
+  .hamburger-icon-wrapper {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

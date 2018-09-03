@@ -1,4 +1,6 @@
 
+[%bs.raw {|require('./styles/menu_main.css')|}];
+
 let component = ReasonReact.statelessComponent("MainMenu");
 
 let make = ( _children) => {

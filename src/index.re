@@ -1,4 +1,5 @@
 [%bs.raw {|require('./index.css')|}];
+/* [%bs.raw {|require('./styles/header.css')|}]; */
 
 [@bs.module "./registerServiceWorker"]
 external register_service_worker : unit => unit = "default";
@@ -10,13 +11,16 @@ ReactDOMRe.renderToElementWithId(
 
 /* ReasonReact.Router.push calls the pushState browser API which */
 /* when given an empty url will push the current url */
-ReasonReact.Router.push("");
+/* ReasonReact.Router.push(""); */
 
 ReactDOMRe.renderToElementWithId(
   <Header />,
   "header",
 );
 
-
+ReactDOMRe.renderToElementWithId(
+  <Footer />,
+  "footer",
+);
 
 register_service_worker();

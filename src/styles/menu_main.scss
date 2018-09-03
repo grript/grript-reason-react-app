@@ -1,0 +1,26 @@
+@import 'styles/1_variables.scss';
+
+.menu-main {
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    list-style-type: none;
+    margin-bottom: .75em;
+    a {
+      color: #fff;
+    }
+  }  
+  li:last-child {
+    margin-bottom: 0;
+  }
+  @media (min-width: $mobile_menu_bp) {
+    float: right;
+    li {
+      float: left;
+      margin-right: 1em;
+      margin-bottom: 0;
+    }
+  }  
+}

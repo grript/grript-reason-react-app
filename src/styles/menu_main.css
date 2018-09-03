@@ -1,0 +1,20 @@
+.menu-main ul {
+  margin: 0;
+  padding: 0; }
+
+.menu-main li {
+  list-style-type: none;
+  margin-bottom: .75em; }
+  .menu-main li a {
+    color: #fff; }
+
+.menu-main li:last-child {
+  margin-bottom: 0; }
+
+@media (min-width: 700px) {
+  .menu-main {
+    float: right; }
+    .menu-main li {
+      float: left;
+      margin-right: 1em;
+      margin-bottom: 0; } }
