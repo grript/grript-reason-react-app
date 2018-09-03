@@ -1,4 +1,4 @@
-[%bs.raw {|require('./styles/footer.css')|}];
+[%bs.raw {|require('./footer.css')|}];
 
 
 let component = ReasonReact.statelessComponent("Footer");

@@ -1,4 +1,4 @@
-[%bs.raw {|require('./styles/hamburger_icon.css')|}];
+[%bs.raw {|require('./hamburger_icon.css')|}];
 
 
 let component = ReasonReact.statelessComponent("HamburgerIcon");

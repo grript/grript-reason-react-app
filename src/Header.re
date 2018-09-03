@@ -1,4 +1,4 @@
-[%bs.raw {|require('./styles/header.css')|}];
+[%bs.raw {|require('./header.css')|}];
 
 
 let component = ReasonReact.statelessComponent("Header");

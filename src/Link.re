@@ -7,7 +7,7 @@ let handleClick = (href, event) =>
     event->ReactEvent.Mouse.preventDefault;
     ReasonReact.Router.push(href);
   };
-let children = "rocks";
+
 let make = (~href, children) => {
   ...component,
   render: (_self) => ReasonReact.createDomElement("a", ~props={"href": href, "onClick": handleClick(href)}, children)

@@ -1,5 +1,4 @@
-
-[%bs.raw {|require('./styles/menu_main.css')|}];
+[%bs.raw {|require('./menu_main.css')|}];
 
 let component = ReasonReact.statelessComponent("MainMenu");
 

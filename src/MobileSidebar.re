@@ -1,4 +1,4 @@
-[%bs.raw {|require('./styles/mobile_sidebar.css')|}];
+[%bs.raw {|require('./mobile_sidebar.css')|}];
 
 let component = ReasonReact.statelessComponent("MobileSidebar");
 
