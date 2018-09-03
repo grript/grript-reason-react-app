@@ -5,7 +5,11 @@
   height: 25px;
   padding: 10px;
   text-align: center;
-  background-color: #66CC00; }
+  background-color: #66CC00;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%); }
   .hamburger-icon-wrapper > .hamburger-icon {
     margin-top: 4px; }
     .hamburger-icon-wrapper > .hamburger-icon > div {

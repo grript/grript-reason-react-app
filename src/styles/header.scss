@@ -1,5 +1,13 @@
 @import 'styles/1_variables.scss'; // assuming a styles directory under src/
 
+
+.header {
+  background-color: $main_color;
+  color: #fff;
+  padding: 1em 0;
+  position: relative;
+}
+
 .header {
   background-color: $main_color;
 }

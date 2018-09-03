@@ -7,9 +7,14 @@
   }
   li {
     list-style-type: none;
-    margin-bottom: .75em;
+    padding: 10px 0;
+    border-bottom: 1px solid #fff;
+    min-width: 200px;
     a {
       color: #fff;
+      text-decoration: none;
+      padding: 0 10px;
+      
     }
   }  
   li:last-child {
@@ -21,6 +26,11 @@
       float: left;
       margin-right: 1em;
       margin-bottom: 0;
+      min-width: auto;
+      border: 0;
+    }
+    li:last-child {
+      margin-right: 0;
     }
   }  
 }

@@ -1,4 +1,10 @@
 .header {
+  background-color: #1F484F;
+  color: #fff;
+  padding: 1em 0;
+  position: relative; }
+
+.header {
   background-color: #1F484F; }
 
 .header-container {

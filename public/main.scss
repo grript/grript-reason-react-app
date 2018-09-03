@@ -7,11 +7,6 @@ a {
   }
 }
 
-.header {
-  background-color: $main_color;
-  color: #fff;
-  padding: 1em 0;
-}
 
 @media (max-width: 930px) {
   .container-mobile {
@@ -31,12 +26,3 @@ a {
   }
 }
 
-.header {
-  position: relative;
-  .hamburger-icon-wrapper {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-}

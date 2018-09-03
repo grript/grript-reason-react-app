@@ -8,6 +8,10 @@
   padding: 10px;
   text-align: center;
   background-color: $mint_green;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 
   & > .hamburger-icon {
     margin-top: 4px;
