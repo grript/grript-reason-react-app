@@ -2,22 +2,50 @@
 
 [@bs.module] external logo : string = "./logo.svg";
 
-let component = ReasonReact.statelessComponent("App");
+type nav = {isOpen: bool};
+
+type action =
+  | ToggleMenu(bool);
+
+type state = {
+  nav
+};
+
+let component = ReasonReact.reducerComponent("App");
 
 let make = (~message, _children) => {
   ...component,
-  render: _self =>
-    <div className="App container container-mobile content-main">
-      <Router>
-        <div className="App-header">
-          <img src=logo className="App-logo" alt="logo" />
-          <h2> (ReasonReact.string(message)) </h2>
-        </div>
-        <p className="App-intro">
-          (ReasonReact.string("To get started, edit"))
-          <code> (ReasonReact.string(" src/App.re ")) </code>
-          (ReasonReact.string("and save to reload."))
-        </p>
-      </Router>  
+  initialState: () => {
+    nav: {
+      isOpen: false
+    }
+  },
+  reducer: (action, state) =>
+    switch action {
+    | ToggleMenu(isOpen) =>
+      ReasonReact.Update({
+        ...state,
+        nav: {
+          isOpen: isOpen
+        }
+      })
+    },
+  render: self =>
+    <div className=("Appx " ++ (self.state.nav.isOpen ? " overlay" : " nav-is-closed"))>
+      <Header />
+      <div className="container container-mobile content-main">
+        <Router>
+          <div className="App-header">
+            <img src=logo className="App-logo" alt="logo" />
+            <h2> (ReasonReact.string(message)) </h2>
+          </div>
+          <p className="App-intro">
+            (ReasonReact.string("To get started, edit"))
+            <code> (ReasonReact.string(" src/App.re ")) </code>
+            (ReasonReact.string("and save to reload."))
+          </p>
+        </Router>  
+      </div>  
+      <Footer />
     </div>,
 };

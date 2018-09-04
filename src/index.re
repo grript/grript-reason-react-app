@@ -13,14 +13,6 @@ ReactDOMRe.renderToElementWithId(
 /* when given an empty url will push the current url */
 /* ReasonReact.Router.push(""); */
 
-ReactDOMRe.renderToElementWithId(
-  <Header />,
-  "header",
-);
 
-ReactDOMRe.renderToElementWithId(
-  <Footer />,
-  "footer",
-);
 
 register_service_worker();
