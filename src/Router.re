@@ -51,5 +51,5 @@ let make = (_children) => {
         | Contact => <Contact />
         }
       )
-    </div>
+    </div>,
 };
