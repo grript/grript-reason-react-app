@@ -5,7 +5,7 @@
 type nav = {isOpen: bool};
 
 type action =
-  | ToggleMenu(bool);
+  | ToggleMenu;
 
 type state = {
   nav
@@ -22,17 +22,19 @@ let make = (~message, _children) => {
   },
   reducer: (action, state) =>
     switch action {
-    | ToggleMenu(isOpen) =>
+    | ToggleMenu =>
       ReasonReact.Update({
         ...state,
         nav: {
-          isOpen: isOpen
+          isOpen: !state.nav.isOpen
         }
       })
     },
-  render: self =>
-    <div className=("Appx " ++ (self.state.nav.isOpen ? " overlay" : " nav-is-closed"))>
-      <Header />
+  render: (self) =>
+    <div className=("App " ++ (self.state.nav.isOpen ? " overlay-nav" : " nav-overlay-is-closed"))>      
+      <Header >
+        ...<HamburgerIcon onClick=(_event  => self.send(ToggleMenu)) />
+      </Header>
       <div className="container container-mobile content-main">
         <Router>
           <div className="App-header">

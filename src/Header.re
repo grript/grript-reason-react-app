@@ -3,19 +3,18 @@
 
 let component = ReasonReact.statelessComponent("Header");
 
-let make = (_children) => {
+let make = ( children) => {
   ...component,
   render: self =>
     <div className="header-main">
       <div className="header">
         <div className="container container-mobile header-container">
           <HeaderBranding message="Grript"/>
-          <HamburgerIcon />
+          {children}
         </div>
-        <MobileSidebar />
+        <MainNav />
       </div>
     </div>,
 };
-
 
   
