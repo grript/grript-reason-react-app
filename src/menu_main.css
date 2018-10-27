@@ -10,7 +10,7 @@
   .menu-main li a {
     color: #fff;
     text-decoration: none;
-    padding: 0 10px; }
+    padding: 0 10px 0 25px; }
 
 .menu-main li:last-child {
   margin-bottom: 0; }

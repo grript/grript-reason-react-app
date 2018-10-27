@@ -1,12 +1,17 @@
 @import 'styles/1_variables.scss';
 
 .main-nav {
-  padding: 1em 12px 2em 12px;
-  position: absolute;
-  right: 0;
-  top: 100%;
+  min-width: 300px;
+  position: fixed;
+  z-index: 999;
+  left: -100%;
+  top: 0;
+  height: 100%;
   background-color: $mobile_sidebar;
   @media (min-width: $mobile_menu_bp) {
+    position: absolute;
+    left: 0;
+    right: 0;
     background-color: transparent;
     padding: 0;
     top: 50%;
@@ -14,5 +19,75 @@
     margin-right: auto;
     margin-left: auto;
     width: 100%;
+    max-width: $max_container_width;
+  }
+}
+
+.main-nav-container {
+  position: relative;
+  height: 100%;
+  overflow: auto;
+}
+.main-nav-inner {
+  overflow: auto;
+  height: 90%;
+  padding-top: 30px;
+  padding-bottom: 12px;
+  @media (min-width: $mobile_menu_bp) {
+    height: auto;
+    padding: 0;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    position: absolute;
+  }  
+}
+html.overlay-is-open {
+  .main-nav {
+    left: 0;
+  }
+}
+
+.close-menu-wrapper{
+  background-color: $mobile_sidebar;
+  height: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  overflow: hidden;
+  display: none;
+  html.overlay-is-open & {
+    @media (max-width: $mobile_menu_bp) {
+      display: block;
+    }
+  }  
+  @media (min-width: $mobile_menu_bp) {
+   display: none;
+  }  
+}
+
+.close-menu {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  color: transparent;
+  font-size: 30px;
+  text-align: left;
+  text-indent: 10px;
+  &:hover {
+    cursor: pointer;
+  }
+  &:after {
+    content: 'x';
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    width: 40px;
+    height: 40px;
   }
 }
