@@ -1,11 +1,11 @@
-.mobile-sidebar {
+.main-nav {
   padding: 1em 12px 2em 12px;
   position: absolute;
   right: 0;
   top: 100%;
   background-color: #195660; }
   @media (min-width: 700px) {
-    .mobile-sidebar {
+    .main-nav {
       background-color: transparent;
       padding: 0;
       top: 50%;
