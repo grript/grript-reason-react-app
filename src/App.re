@@ -22,16 +22,20 @@ let make = (~message, _children) => {
   },
   reducer: (action, state) =>
     switch action {
-    | ToggleMenu =>
-      ReasonReact.Update({
-        ...state,
-        nav: {
-          isOpen: !state.nav.isOpen
-        }
-      })
+    | ToggleMenu => {
+        Js.log("Togglemenu clicked!");
+
+        [%bs.raw {| document.documentElement.classList.toggle('overlay-is-open') |}];
+        ReasonReact.Update({
+          ...state,
+          nav: {
+            isOpen: !state.nav.isOpen
+          }
+        })
+      }  
     },
   render: (self) =>
-    <div className=("App " ++ (self.state.nav.isOpen ? " overlay-nav" : " nav-overlay-is-closed"))>      
+    <div className=("App " ++ (self.state.nav.isOpen ? " overlay-open" : " overlay-closed"))>      
       <Header >
         ...<HamburgerIcon onClick=(_event  => self.send(ToggleMenu)) />
       </Header>
@@ -49,5 +53,6 @@ let make = (~message, _children) => {
         </Router>  
       </div>  
       <Footer />
+      <Overlay />
     </div>,
 };
