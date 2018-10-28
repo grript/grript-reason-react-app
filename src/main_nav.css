@@ -37,8 +37,7 @@
 .main-nav-inner {
   overflow: auto;
   height: 90%;
-  padding-top: 30px;
-  padding-bottom: 12px; }
+  padding: 45px 55px 12px 0; }
   @media (min-width: 700px) {
     .main-nav-inner {
       height: auto;
@@ -50,13 +49,14 @@
 
 .close-menu-wrapper {
   background-color: #195660;
-  height: 40px;
+  height: 45px;
   position: fixed;
   top: 0;
   left: 0;
+  white-space: nowrap;
   width: 0;
   overflow: hidden;
-  transition: all .2s ease; }
+  transition: all 200ms ease; }
   html.overlay-is-open .close-menu-wrapper {
     width: 300px; }
     @media (max-width: 700px) {
@@ -66,10 +66,15 @@
     .close-menu-wrapper {
       display: none; } }
 
+.close-menu-pre-bar {
+  width: 265px;
+  height: 40px;
+  display: inline-block; }
+
 .close-menu {
   overflow: hidden;
-  position: absolute;
-  top: 10px;
+  position: relative;
+  display: inline-block;
   right: 10px;
   width: 25px;
   height: 25px;

@@ -13,7 +13,6 @@
   transition: all .2s ease;
   @media (min-width: $mobile_menu_bp) {
     position: absolute;
-    // left: 0;
     right: 0;
     background-color: transparent;
     padding: 0;
@@ -44,8 +43,7 @@
 .main-nav-inner {
   overflow: auto;
   height: 90%;
-  padding-top: 30px;
-  padding-bottom: 12px;
+  padding: 45px 55px 12px 0;
   @media (min-width: $mobile_menu_bp) {
     height: auto;
     padding: 0;
@@ -59,16 +57,17 @@
 
 .close-menu-wrapper{
   background-color: $mobile_sidebar;
-  height: 40px;
+  height: 45px;
   position: fixed;
   top: 0;
   left: 0;
+  white-space: nowrap;
   // width: 300px;
   width: 0;
   overflow: hidden;
   // display: none;
   // left: -300px;
-  transition: all .2s ease;
+  transition: all 200ms ease;
   html.overlay-is-open & {
     width: 300px;
     @media (max-width: $mobile_menu_bp) {
@@ -82,10 +81,16 @@
   }  
 }
 
+.close-menu-pre-bar {
+  width: 265px;
+  height: 40px;
+  display: inline-block;
+}
+
 .close-menu {
   overflow: hidden;
-  position: absolute;
-  top: 10px;
+  position: relative;
+  display: inline-block;
   right: 10px;
   width: 25px;
   height: 25px;

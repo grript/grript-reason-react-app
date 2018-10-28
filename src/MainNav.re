@@ -10,9 +10,10 @@ let make = ( _children) => {
     <div className="main-nav">
       <div className="main-nav-container">
         <div className="close-menu-wrapper">
-          <div className="close-menu" onClick=(self.handle(handleClick))>
+          <span className="close-menu-pre-bar"></span>
+          <span className="close-menu" onClick=(self.handle(handleClick))>
           (ReasonReact.string("Close"))
-          </div>
+          </span>
         </div>  
         <div className="main-nav-inner container" id="main-nav-inner">
           <MenuMain />
