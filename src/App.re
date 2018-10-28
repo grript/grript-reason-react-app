@@ -39,7 +39,7 @@ let make = (~message, _children) => {
       <Header >
         ...<HamburgerIcon onClick=(_event  => self.send(ToggleMenu)) />
       </Header>
-      <div className="container container-mobile content-main">
+      <main className="container container-mobile content-main">
         <Router>
           <div className="App-header">
             <img src=logo className="App-logo" alt="logo" />
@@ -51,7 +51,7 @@ let make = (~message, _children) => {
             (ReasonReact.string("and save to reload."))
           </p>
         </Router>  
-      </div>  
+      </main>  
       <Footer />
       <Overlay />
     </div>,

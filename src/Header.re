@@ -6,7 +6,7 @@ let component = ReasonReact.statelessComponent("Header");
 let make = ( children) => {
   ...component,
   render: self =>
-    <div className="header-main">
+    <header className="header-main">
       <div className="header">
         <div className="container container-mobile header-container">
           {children}
@@ -14,7 +14,7 @@ let make = ( children) => {
         </div>
         <MainNav />
       </div>
-    </div>,
+    </header>,
 };
 
   
