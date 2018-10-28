@@ -8,12 +8,14 @@
   li {
     list-style-type: none;
     padding: 10px 0;
-    border-bottom: 1px solid #fff;
     min-width: 200px;
     a {
       color: #fff;
       text-decoration: none;
       padding: 0 10px 0 25px;
+      font-weight: 200;
+      font-size: 14px;
+      text-transform: uppercase;
       
     }
   }  

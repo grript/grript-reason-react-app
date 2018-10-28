@@ -1,3 +1,7 @@
+[%bs.raw {|require('./headerBranding.css')|}];
+
+
+
 /* This is the basic component. */
 let component = ReasonReact.statelessComponent("HeaderBranding");
 

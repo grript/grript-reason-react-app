@@ -5,12 +5,14 @@
 .menu-main li {
   list-style-type: none;
   padding: 10px 0;
-  border-bottom: 1px solid #fff;
   min-width: 200px; }
   .menu-main li a {
     color: #fff;
     text-decoration: none;
-    padding: 0 10px 0 25px; }
+    padding: 0 10px 0 25px;
+    font-weight: 200;
+    font-size: 14px;
+    text-transform: uppercase; }
 
 .menu-main li:last-child {
   margin-bottom: 0; }

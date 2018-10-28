@@ -9,8 +9,8 @@ let make = ( children) => {
     <div className="header-main">
       <div className="header">
         <div className="container container-mobile header-container">
-          <HeaderBranding message="Grript"/>
           {children}
+          <HeaderBranding message="Grript"/>
         </div>
         <MainNav />
       </div>

@@ -1,0 +1,9 @@
+@import 'styles/1_variables.scss'; // assuming a styles directory under src/
+
+
+.site-branding {
+  padding-left: 50px;
+  @media (min-width: $mobile_menu_bp) {
+    padding-left: 0;
+  }
+}

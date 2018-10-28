@@ -1,0 +1,5 @@
+.site-branding {
+  padding-left: 50px; }
+  @media (min-width: 700px) {
+    .site-branding {
+      padding-left: 0; } }

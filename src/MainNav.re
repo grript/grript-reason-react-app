@@ -11,7 +11,7 @@ let make = ( _children) => {
       <div className="main-nav-container">
         <div className="close-menu-wrapper">
           <div className="close-menu" onClick=(self.handle(handleClick))>
-          (ReasonReact.string("Close menu"))
+          (ReasonReact.string("Close"))
           </div>
         </div>  
         <div className="main-nav-inner container" id="main-nav-inner">
