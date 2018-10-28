@@ -10,7 +10,6 @@
   left: 0;
   height: 100%;
   background-color: $mobile_sidebar;
-  box-shadow: 1px 4px 4px 2px rgba(0,0,0,.3);
   transition: all .2s ease;
   @media (min-width: $mobile_menu_bp) {
     position: absolute;
@@ -22,13 +21,17 @@
     transform: translateY(-50%);
     margin-right: auto;
     margin-left: auto;
-    width: 300px;
+    width: auto;
     max-width: $max_container_width;
     box-shadow: none;
   }
   html.overlay-is-open & {
     width: 300px;
     transition: all .2s ease;
+    box-shadow: 1px 4px 4px 2px rgba(0,0,0,.3);
+    @media (min-width: $mobile_menu_bp) {
+      width: auto;
+    }  
   }
 }
 
